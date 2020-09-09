@@ -50,8 +50,8 @@ for _ in range(num_of_enemies):
     enemyImg.append(pygame.image.load('monsters.png'))
     enemyX.append(random.randint(0, 800))
     enemyY.append(random.randint(50, 200))
-    enemyX_change.append(2)
-    enemyY_change.append(4)
+    enemyX_change.append(5)
+    enemyY_change.append(10)
 
 # bullet
 
@@ -236,11 +236,11 @@ while running:
         enemyX[i] += enemyX_change[i]
         if enemyX[i] <= 0:
             enemyX[i] = 0
-            enemyX_change[i] = 2
+            enemyX_change[i] =7
             enemyY[i] += enemyY_change[i]
         elif enemyX[i] >= 736:
             enemyX[i] = 736
-            enemyX_change[i] = -2
+            enemyX_change[i] = -5
             enemyY[i] += enemyY_change[i]
 
             # collision
